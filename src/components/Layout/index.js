@@ -2,8 +2,8 @@ import s from './style.module.css';
 
 const Layout = ({title, descr, urlBg, colorBg}) => {
     const bgStyle = {
-        backgroundImage: urlBg && `url('${urlBg}')`,
-        backgroundColor: colorBg && colorBg
+        backgroundImage: urlBg ? `url('${urlBg}')` : '',
+        backgroundColor: colorBg || ''
     }
     return (
         <section style={bgStyle} className={s.root}>
